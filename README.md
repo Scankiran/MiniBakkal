@@ -1,0 +1,2 @@
+# MiniBakkal
+AppLogist Task
