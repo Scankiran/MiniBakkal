@@ -6,5 +6,7 @@ target 'MiniBakkal' do
   use_frameworks!
 
   # Pods for MiniBakkal
+	pod 'JGProgressHUD'
+    	pod 'Kingfisher', '~> 5.0'
 
 end
