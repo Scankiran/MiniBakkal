@@ -19,13 +19,65 @@ class ProductCollectionCell: UICollectionViewCell {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var productNameLabel: UILabel!
     
+    lazy var count = 0
+    var amount = 0
+    var product:Product?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        setBorder(self.contentView)
+        setBorder(self.increaseValueButton)
+        setBorder(self.decreaseValueButton)
+        decreaseValueButton.isHidden = true
+        valueLabel.isHidden = true
+        valueLabel.text = "0"
+    
     }
     
-    func configure(_ data:Data) {
+    func configure(_ data:Product) {
+        API.run.getImage(data.imageUrl, data.id) { (image, err) in
+            if let err = err {
+                print(err.localizedDescription)
+                return
+            }
+            self.productImage.image = image
+        }
+        
+        priceLabel.text = "\(data.currency)\(data.price)"
+        productNameLabel.text = data.name
+        self.amount = data.stock
+        product = data
+    }
+    
+    
+    private func setBorder(_ content:UIView) {
+        content.layer.borderColor = UIColor.gray.cgColor
+        content.layer.borderWidth = 1
         
     }
-
+    
+    @IBAction private func increaseButtonAction(_ sender:UIButton) {
+        if count < amount {
+            decreaseValueButton.isHidden = false
+            valueLabel.isHidden = false
+            count += 1
+            valueLabel.text = "\(count)"
+        }
+        
+       
+        
+    }
+    
+    @IBAction private func decreaseButtonAction(_ sender:UIButton) {
+        if count > 0 {
+            count -= 1
+            valueLabel.text = "\(count)"
+        }
+        
+        if count <= 0{
+            decreaseValueButton.isHidden = true
+            valueLabel.isHidden = true
+        }
+        
+    }
 }

@@ -26,7 +26,7 @@ class CartTableCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(_ data:Data) {
+    func configure(_ data:Product) {
         //Configure
     }
     
