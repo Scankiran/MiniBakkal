@@ -26,8 +26,8 @@ class ProductCollectionCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         setBorder(self.contentView)
-        setBorder(self.increaseValueButton)
-        setBorder(self.decreaseValueButton)
+        setBorder(increaseValueButton)
+        setBorder(decreaseValueButton)
         decreaseValueButton.isHidden = true
         valueLabel.isHidden = true
         valueLabel.text = "0"
@@ -62,6 +62,13 @@ class ProductCollectionCell: UICollectionViewCell {
             valueLabel.isHidden = false
             count += 1
             valueLabel.text = "\(count)"
+            
+            if Session.run.cart[product!] != nil {
+                Session.run.cart[product!]! += 1
+            } else {
+                Session.run.cart[product!] = 1
+            }
+            MainView.updateBudge()
         }
         
        
@@ -72,6 +79,15 @@ class ProductCollectionCell: UICollectionViewCell {
         if count > 0 {
             count -= 1
             valueLabel.text = "\(count)"
+            
+            if Session.run.cart[product!] != nil {
+                if Session.run.cart[product!] == 1 {
+                    Session.run.cart.removeValue(forKey: product!)
+                } else {
+                    Session.run.cart[product!]! -= 1
+                }
+            }
+            MainView.updateBudge()
         }
         
         if count <= 0{
@@ -80,4 +96,6 @@ class ProductCollectionCell: UICollectionViewCell {
         }
         
     }
+    
+    
 }

@@ -54,7 +54,7 @@ class API {
         
         if !cache.isCached(forKey: productId) {
             let downloader = ImageDownloader.default
-            
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
             downloader.downloadImage(with: URL(string: imageURL)!, completionHandler:  { result in
                 switch result {
                 case .success(let value):
@@ -63,6 +63,7 @@ class API {
                 case .failure(let error):
                     handler(nil,error)
                 }
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
             })
             
         } else {

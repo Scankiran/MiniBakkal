@@ -12,7 +12,7 @@ class MainView:UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let btn = BadgedButtonItem(with: UIImage(named: "shoppingSolid"))
+    static let btn = BadgedButtonItem(with: UIImage(named: "shoppingSolid"))
     
     var dataSet:[Product] = []
     
@@ -21,12 +21,13 @@ class MainView:UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         giveDelegateToCollectionView()
-        btn.setBadge(with: 2)
-        btn.tapAction = {
+        MainView.btn.tapAction = {
             self.performSegue(withIdentifier: "toShoppingCart", sender: self)
         }
         
-        self.navigationItem.rightBarButtonItem = btn
+        
+        
+        self.navigationItem.rightBarButtonItem = MainView.btn
         
         API.run.getProducts { [self] (result, err) in
             if let err = err {
@@ -63,6 +64,10 @@ extension MainView: UICollectionViewDelegate, UICollectionViewDataSource {
         collectionView.register(UINib.init(nibName: "ProductCollectionCell", bundle: nil), forCellWithReuseIdentifier: "ProductCollectionCell")
         collectionView.delegate = self
         collectionView.dataSource = self
+    }
+    
+    static func updateBudge() {
+        self.btn.setBadge(with: Session.run.cart.values.reduce(0, +))
     }
     
 }

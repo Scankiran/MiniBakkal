@@ -54,10 +54,12 @@ class BadgedButtonItem: UIBarButtonItem {
         self.filterBtn.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
 
         self.lblBadge.frame = CGRect(x: 20, y: 0, width: 15, height: 15)
-        self.lblBadge.backgroundColor = .red
+        self.lblBadge.backgroundColor = UIColor.init(red: 194/255, green: 210/255, blue: 218/255, alpha: 1)
         self.lblBadge.clipsToBounds = true
         self.lblBadge.layer.cornerRadius = 7
-        self.lblBadge.textColor = UIColor.white
+        self.lblBadge.layer.borderWidth = 1
+        self.lblBadge.layer.borderColor = UIColor.black.cgColor
+        self.lblBadge.textColor = UIColor.black
         self.lblBadge.font = UIFont.systemFont(ofSize: 10)
         self.lblBadge.textAlignment = .center
         self.lblBadge.isHidden = true
