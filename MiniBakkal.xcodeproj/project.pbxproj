@@ -23,6 +23,7 @@
 		2CF264FF2528678C00655867 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF264FE2528678C00655867 /* API.swift */; };
 		2CF26502252867FC00655867 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF26501252867FC00655867 /* Product.swift */; };
 		2CF26505252881EC00655867 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF26504252881EC00655867 /* Session.swift */; };
+		2CF265082528C91400655867 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF265072528C91400655867 /* Order.swift */; };
 		FB55008A1598B3EB2903599E /* Pods_MiniBakkal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B7359232FD5B89C087DE7F /* Pods_MiniBakkal.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		2CF264FE2528678C00655867 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		2CF26501252867FC00655867 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		2CF26504252881EC00655867 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		2CF265072528C91400655867 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		31DC954DE93119455AF07DF2 /* Pods-MiniBakkal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniBakkal.release.xcconfig"; path = "Target Support Files/Pods-MiniBakkal/Pods-MiniBakkal.release.xcconfig"; sourceTree = "<group>"; };
 		74F2560B24596A5DAE8FAE9B /* Pods-MiniBakkal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniBakkal.debug.xcconfig"; path = "Target Support Files/Pods-MiniBakkal/Pods-MiniBakkal.debug.xcconfig"; sourceTree = "<group>"; };
 		82B7359232FD5B89C087DE7F /* Pods_MiniBakkal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniBakkal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +131,7 @@
 				2CF264FE2528678C00655867 /* API.swift */,
 				2CF26501252867FC00655867 /* Product.swift */,
 				2CF26504252881EC00655867 /* Session.swift */,
+				2CF265072528C91400655867 /* Order.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				2CDC0BA02527AFDA00C2DBCE /* MiniBakkal.xcdatamodeld in Sources */,
 				2CDC0BC92527B82700C2DBCE /* ProductCollectionCell.swift in Sources */,
 				2CDC0BCD2527BD2A00C2DBCE /* ShoppingCartView.swift in Sources */,
+				2CF265082528C91400655867 /* Order.swift in Sources */,
 				2CDC0BC12527B40800C2DBCE /* MainView.swift in Sources */,
 				2CF26505252881EC00655867 /* Session.swift in Sources */,
 				2CF26502252867FC00655867 /* Product.swift in Sources */,

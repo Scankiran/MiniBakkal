@@ -66,7 +66,7 @@
                                 <rect key="frame" x="0.0" y="544" width="375" height="123"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toplam:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aP0-l8-tbv">
-                                        <rect key="frame" x="25" y="51" width="61" height="21"/>
+                                        <rect key="frame" x="28" y="51" width="61" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="Qmj-xY-73a"/>
                                         </constraints>
@@ -74,8 +74,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₺15.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nc3-Ca-gQC">
-                                        <rect key="frame" x="103" y="47.5" width="71" height="28"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nc3-Ca-gQC">
+                                        <rect key="frame" x="97" y="47.5" width="0.0" height="28"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="28" id="1Si-J8-R91"/>
                                         </constraints>
@@ -84,13 +84,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTH-m5-9Nk">
-                                        <rect key="frame" x="191" y="38" width="159" height="46"/>
+                                        <rect key="frame" x="201" y="40" width="146" height="42"/>
                                         <color key="backgroundColor" name="AccentColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="159" id="NeE-hM-Qsy"/>
-                                            <constraint firstAttribute="height" constant="46" id="hxl-yA-w8j"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="146" id="NeE-hM-Qsy"/>
+                                            <constraint firstAttribute="height" constant="42" id="hxl-yA-w8j"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                         <state key="normal" title="Sepeti Onayla">
                                             <color key="titleColor" red="0.96643537280000003" green="0.97274976970000004" blue="0.9800027013" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -103,13 +103,13 @@
                                 <color key="backgroundColor" red="0.80793941020000004" green="0.94926482440000004" blue="0.91371595859999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="123" id="2v1-RW-NXF"/>
-                                    <constraint firstItem="aP0-l8-tbv" firstAttribute="leading" secondItem="n42-8F-Hwo" secondAttribute="leading" constant="25" id="8ID-R4-9pJ"/>
-                                    <constraint firstAttribute="bottom" secondItem="fTH-m5-9Nk" secondAttribute="bottom" constant="39" id="EJG-cW-1cf"/>
+                                    <constraint firstItem="aP0-l8-tbv" firstAttribute="leading" secondItem="n42-8F-Hwo" secondAttribute="leading" constant="28" id="8ID-R4-9pJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="fTH-m5-9Nk" secondAttribute="bottom" constant="41" id="EJG-cW-1cf"/>
                                     <constraint firstItem="nc3-Ca-gQC" firstAttribute="centerY" secondItem="aP0-l8-tbv" secondAttribute="centerY" id="F0g-Hn-b62"/>
                                     <constraint firstItem="fTH-m5-9Nk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nc3-Ca-gQC" secondAttribute="trailing" constant="8" symbolic="YES" id="Hcu-5x-Vts"/>
                                     <constraint firstAttribute="bottom" secondItem="aP0-l8-tbv" secondAttribute="bottom" constant="51" id="b9F-ck-tId"/>
-                                    <constraint firstAttribute="trailing" secondItem="fTH-m5-9Nk" secondAttribute="trailing" constant="25" id="eW6-pl-3Ki"/>
-                                    <constraint firstItem="nc3-Ca-gQC" firstAttribute="leading" secondItem="aP0-l8-tbv" secondAttribute="trailing" constant="17" id="lit-OE-Jvv"/>
+                                    <constraint firstAttribute="trailing" secondItem="fTH-m5-9Nk" secondAttribute="trailing" constant="28" id="eW6-pl-3Ki"/>
+                                    <constraint firstItem="nc3-Ca-gQC" firstAttribute="leading" secondItem="aP0-l8-tbv" secondAttribute="trailing" constant="8" id="lit-OE-Jvv"/>
                                 </constraints>
                             </view>
                         </subviews>

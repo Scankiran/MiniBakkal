@@ -16,6 +16,7 @@ class ProductCollectionCell: UICollectionViewCell {
     @IBOutlet weak var valueLabel: UILabel!
     
     
+    @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var productNameLabel: UILabel!
     
@@ -25,9 +26,9 @@ class ProductCollectionCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        setBorder(self.contentView)
-        setBorder(increaseValueButton)
-        setBorder(decreaseValueButton)
+        setBorder(stackView)
+        setBorder(valueLabel)
+        
         decreaseValueButton.isHidden = true
         valueLabel.isHidden = true
         valueLabel.text = "0"

@@ -25,8 +25,6 @@ class MainView:UIViewController {
             self.performSegue(withIdentifier: "toShoppingCart", sender: self)
         }
         
-        
-        
         self.navigationItem.rightBarButtonItem = MainView.btn
         
         API.run.getProducts { [self] (result, err) in
@@ -37,6 +35,13 @@ class MainView:UIViewController {
                 performSelector(onMainThread: #selector(asd), with: nil, waitUntilDone: false)
             }
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        MainView.updateBudge()
+        
     }
     
     @objc func asd() {

@@ -10,5 +10,21 @@ import Foundation
 class Session {
     static let run = Session()
     
-    var cart:[Product:Int] = [:] 
+    var totalPrice:Double = 0
+    var cart:[Product:Int] = [:] {
+        didSet {
+            calculateTotalPrice()
+        }
+    }
+    
+    private func calculateTotalPrice() {
+        totalPrice = 0
+        let products = Array(cart.keys)
+        let values = Array(cart.values)
+        
+        for index in 0..<products.count {
+            self.totalPrice += (products[index].price * Double(values[index]))
+        }
+        print(totalPrice)
+    }
 }
