@@ -7,17 +7,6 @@
 
 import Foundation
 
-/**
- {
-        "id": "5f52348e919ff34aed98d349",
-        "name": "Elma",
-        "price": 6.99,
-        "currency": "₺",
-        "imageUrl": "https://desolate-shelf-18786.herokuapp.com/images/elma.png",
-        "stock": 5
-    }
- */
-
 class Product: Hashable, Codable {
     
     static func == (lhs: Product, rhs: Product) -> Bool {

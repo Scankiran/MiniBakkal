@@ -9,6 +9,7 @@ import UIKit
 
 class CartTableCell: UITableViewCell {
 
+    //MARK: Variables
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var productPrice: UILabel!
@@ -35,6 +36,8 @@ class CartTableCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    
+    //MARK: Configure
     func configure(_ data:Product, _ count:Int) {
         //Configure
         API.run.getImage(data.imageUrl, data.id) { (image, err) in
@@ -56,13 +59,14 @@ class CartTableCell: UITableViewCell {
         self.count = count
     }
     
-    
+    //MARK:SetBorder
     private func setBorder(_ content:UIView) {
         content.layer.borderColor = UIColor.gray.cgColor
         content.layer.borderWidth = 1
         
     }
     
+    //MARK: Outlet Actions
     @IBAction private func increaseButtonAction(_ sender:UIButton) {
         if count < amount {
             decreaseButton.isHidden = false
@@ -78,8 +82,6 @@ class CartTableCell: UITableViewCell {
             MainView.updateBudge()
             
         }
-
-
 
     }
 

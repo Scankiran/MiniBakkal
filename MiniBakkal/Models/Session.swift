@@ -7,7 +7,9 @@
 
 import Foundation
 
+//Save User Session Status.
 class Session {
+    
     static let run = Session()
     
     var totalPrice:Double = 0
